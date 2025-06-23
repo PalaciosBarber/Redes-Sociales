@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palacios Barber Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url("images/fondo1.jpeg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+.card {
+  position: relative;
+  background: none; /* Quitamos el fondo aquí */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 480px;
+  width: 90%;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/fondo3.jpg") center/cover no-repeat;
+  opacity: 0.2; /* Ajusta la opacidad aquí */
+  z-index: -1;
+  border-radius: 20px;
+}
+
+
+    .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el espacio entre los botones */
+  flex: 1;
+  margin: 25px 0; /* Margen superior e inferior */
+}
+
+.btn {
+  height: 50px; /* Tamaño fijo */
+  text-decoration: none;
+  background: #1e1e1ea7;
+  color: white;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0; /* Margen entre los botones */
+}
+
+
+
+    .btn:hover {
+      background: #0b0904c0;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="buttons">
+    <a class="btn" href="https://www.instagram.com/palacios_barber.shop?igsh=eWY2OHNpNTNoczZn" target="_blank">
+      <img src="images/Instagram_icon.png" alt="Instagram" style="height: 24px; margin-right: 10px;">
+      Instagram
+    </a>
+    <a class="btn" href="https://www.facebook.com/share/1BRDSiJkK7/" target="_blank">
+      <img src="images/Facebook_icon.png" alt="Facebook" style="height: 24px; margin-right: 10px;">
+      Facebook
+    </a>
+    <a class="btn" href="https://wa.me/message/XLTLY73TJEYQF1" target="_blank">
+      <img src="images/WhatsApp-icon.png" alt="WhatsApp" style="height: 24px; margin-right: 10px;">
+      WhatsApp
+    </a>
+    <a class="btn" href="https://maps.google.com/?q=Palacios+Barber+Shop" target="_blank">📍 Google Maps</a>
+  </div>
+</div>
+</body>
+</html>
