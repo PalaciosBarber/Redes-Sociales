@@ -34,30 +34,25 @@
 }   
 .card {
   position: relative;
-  aspect-ratio: 3 / 4;
-  width: 90%;
-  max-width: clamp(230px, 80%, 350px);
-  padding: clamp(1rem, 2vh, 2rem) 1rem clamp(1.5rem, 3vh, 2rem); /* padding general */
-  padding-top: clamp(60px, 15%, 140px); /* Espacio para el logo */
+  width: 540px;
+  height: 720px;
   margin: 3rem auto;
-  border-radius: 15px;
+  padding: 160px 1rem 2rem; /* ajusta si el logo tapa botones */
+  border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
 }
+
 .card::before {
   content: "";
   position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  background: url("images/fondo2.png") center/contain no-repeat;
-  opacity: 0.5;
+  inset: 0;
+  background: url("images/fondo2.png") center center no-repeat;
+  background-size: contain;
   z-index: -1;
   border-radius: 20px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
 }
-
     .buttons {
   display: flex;
   flex-direction: column;
