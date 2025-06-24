@@ -35,7 +35,7 @@
 .card {
   position: relative; /* <- ESTA LÍNEA ES CLAVE */
   width: 90%;
-  max-width: 350px;
+  max-width: clamp(230px, 80%, 350px); /* ← Automático */
   padding: 1.5rem 1rem;
   margin: 3rem auto;
   border-radius: 15px;
