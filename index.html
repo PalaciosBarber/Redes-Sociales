@@ -33,17 +33,17 @@
   }
 }   
 .card {
-  position: relative; /* <- ESTA LÍNEA ES CLAVE */
-  aspect-ratio: 3 / 4; /* Proporción de 3:4 (ajustable) */
+  position: relative;
+  aspect-ratio: 3 / 4;
   width: 90%;
-  max-width: clamp(230px, 80%, 350px); /* ← Automático */
-  padding: 1.5rem 1rem;
+  max-width: clamp(230px, 80%, 350px);
+  padding: clamp(1rem, 2vh, 2rem) 1rem clamp(1.5rem, 3vh, 2rem); /* padding general */
+  padding-top: clamp(60px, 15%, 140px); /* Espacio para el logo */
   margin: 3rem auto;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
-
 .card::before {
   content: "";
   position: absolute;
@@ -53,14 +53,13 @@
   z-index: -1;
   border-radius: 20px;
 }
-
-
     .buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribuye el espacio entre los botones */
+  justify-content: space-between;
   flex: 1;
-  margin: 12vh 1rem 0;
+  gap: 12px; /* Espaciado entre botones */
+  margin: 0 1rem; /* Elimina margen top grande */
 }
 
 .btn {
