@@ -34,6 +34,7 @@
 }   
 .card {
   position: relative; /* <- ESTA LÍNEA ES CLAVE */
+  aspect-ratio: 3 / 4; /* Proporción de 3:4 (ajustable) */
   width: 90%;
   max-width: clamp(230px, 80%, 350px); /* ← Automático */
   padding: 1.5rem 1rem;
@@ -41,13 +42,6 @@
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-}
-
-/* Elimina la altura fija o demasiado restrictiva */
-@media (min-height: 500px) {
-  .card {
-    min-height: 400px;
-  }
 }
 
 .card::before {
@@ -66,7 +60,7 @@
   flex-direction: column;
   justify-content: space-between; /* Distribuye el espacio entre los botones */
   flex: 1;
-  margin: 162px 25px 0; /* Margen superior e inferior */
+  margin: 12vh 1rem 0;
 }
 
 .btn {
