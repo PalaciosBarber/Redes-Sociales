@@ -3,23 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Palacios Barber Shop: Dudas o Sugerencias por WhatsApp, síguenos en Facebook e Instagram y encuentra nuestra ubicacióna traves de Google Maps.">
-  <meta name="author" content="Palacios Barber Shop">
-  <meta name="keywords" content="barbería, Palacios, Monterrey, corte de cabello, barber shop, estilo">
   <title>Palacios Barber Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="icon" href="images/barber-icon.png" type="image/png">
+  <link rel="icon" href="images/barber-icon.webp" type="image/png">
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: url("images/fondo1.jpeg") center/cover no-repeat;
+      background: url("images/fondo1.webp") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-    }.card {
-  animation: fadeIn 1s ease-in-out;
+    }
+    .card {
+  animation: fadeIn 2.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -32,50 +30,90 @@
     opacity: 1;
   }
 }   
-.card {
-  position: relative;
-  width: 540px;
-  height: 720px;
-  margin: 3rem auto;
-  padding: 160px 1rem 2rem; /* ajusta si el logo tapa botones */
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  animation: fadeIn 1s ease-in-out;
-}
+    .card {
+      position: relative;
+      background: none;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+      min-width: 120px;
+      aspect-ratio: 3 / 4;
+      color: white;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+    }
 
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("images/fondo2.png") center center no-repeat;
-  background-size: contain;
-  z-index: -1;
-  border-radius: 20px;
-}
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("images/fondo2.webp") top center / contain no-repeat;
+      opacity: 0.5;
+      z-index: -1;
+      border-radius: 20px;
+    }
+
     .buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  gap: 12px; /* Espaciado entre botones */
-}
-.btn {
-  height: 50px; /* Tamaño fijo */
-  text-decoration: none;
-  background: #1e1e1ebb;
-  color: white;
-  border-radius: 10px;
-  transition: background 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0; /* Margen entre los botones */
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; 
+      flex: 1;
+      margin-top: 49%; 
+      padding-bottom: 5%; 
+    }
+    .btn {
+      height: 50px;
+      width: 90%; 
+      text-decoration: none;
+      background: #1e1e1ea7;
+      color: white;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn img {
+      height: 24px; 
+      margin-right: 10px;
+    }
 
     .btn:hover {
-      background: #0b0904e0;
+      background: #0b0904c0;
       color: #ffffff;
+    }
+
+@media (max-width: 323px) {
+      .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-between;
+        gap: 8px;
+        margin-top: 49%;
+      }
+      
+      .btn {
+        width: 90%;
+        height: 45px;
+        min-width: 45px;
+        justify-content: center;
+        padding: 0 5px;
+      align-items: center;
+      justify-content: center;
+      }
+      .btn span {
+        display: none;
+      }
+      
+      .btn img {
+        margin-right: 0;
+      }
     }
   </style>
 </head>
@@ -83,19 +121,23 @@
 <div class="card">
   <div class="buttons">
     <a class="btn" href="https://www.instagram.com/palacios_barber.shop?igsh=eWY2OHNpNTNoczZn" target="_blank">
-      <img src="images/Instagram_icon.png" alt="Ir al perfil de Instagram de Palacios Barber Shop" style="height: 24px; margin-right: 10px;">
-      Instagram
+      <img src="images/Instagram_icon.webp" alt="Instagram">
+      <span>Instagram</span>
     </a>
     <a class="btn" href="https://www.facebook.com/share/1BRDSiJkK7/" target="_blank">
-      <img src="images/facebook_icon.png" alt="Ir al perfil de Facebook de Palacios Barber Shop" style="height: 24px; margin-right: 10px;">
-      Facebook
+      <img src="images/facebook_icon.webp" alt="Facebook">
+      <span>Facebook</span>
     </a>
-    <a class="btn" href="https://wa.me/message/XLTLY73TJEYQF1" target="_blank">
-      <img src="images/whatsapp-icon.png" alt="Ir al WhatsApp de Palacios Barber Shop" style="height: 24px; margin-right: 10px;">
-      WhatsApp
+    <a class="btn" href="https://wa.me/message/XUFJYWAJOQ5VI1" target="_blank">
+      <img src="images/whatsapp-icon.png" alt="WhatsApp">
+      <span>WhatsApp</span>
     </a>
-    <a class="btn" href="https://maps.google.com/?q=Palacios+Barber+Shop" target="_blank">📍 Google Maps</a>
+    <a class="btn" href="https://maps.google.com/?q=Palacios+Barber+Shop" target="_blank">
+      <img src="images/maps-icon.webp" alt="Google Maps"> <!-- Added icon for Google Maps -->
+      <span>Google Maps</span>
+    </a>
   </div>
+</div>
 </div>
 </body>
 </html>
